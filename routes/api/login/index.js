@@ -28,3 +28,5 @@ app.post('/api/login', (req, res) => {
     res.sendStatus(403)
   }
 })
+
+module.exports = app
