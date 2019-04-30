@@ -18,6 +18,10 @@
     {
       "src": "/api/login",
       "dest": "/routes/api/login/index.js"
+    },
+    {
+      "src": "/api/secret",
+      "dest": "/routes/api/secret/index.js"
     }
   ]
 }
