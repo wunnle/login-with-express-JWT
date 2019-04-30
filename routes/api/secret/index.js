@@ -3,6 +3,13 @@ const jwt = require('jsonwebtoken')
 
 const app = express()
 
+app.get('/api/secret', (req, res) => {
+  res.json({
+    message: 'welcome to the API'
+  })
+})
+
+
 app.post('/api/secret', verifyToken, (req, res) => {
   jwt.verify(req.token, 'secretkey', (error, authdata) => {
     if (error) {
