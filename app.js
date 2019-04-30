@@ -71,7 +71,8 @@ function verifyToken(req, res, next) {
     // Forbidden
     res.sendStatus(403)
   }
-
 }
+
+module.exports = app
 
 app.listen(5000, () => console.log('Server started on port 5000'))
