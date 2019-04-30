@@ -1,7 +1,7 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
 const bodyParser = require('body-parser')
-const { compare } = require('./password-helper')
+const { compare } = require('../password-helper')
 
 
 const app = express()
@@ -21,12 +21,6 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
   res.send('Welcome!');
 });
-
-app.get('/api', (req, res) => {
-  res.json({
-    message: 'welcome to the API'
-  })
-})
 
 app.post('/api/posts', verifyToken, (req, res) => {
   jwt.verify(req.token, 'secretkey', (error, authdata) => {
