@@ -1,6 +1,7 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
+const { compare } = require('./password-helper')
 
 
 const app = express()
@@ -10,7 +11,7 @@ const users = [
     id: 1,
     username: 'wunnle',
     email: 'sinanaksay@gmail.com',
-    password: '123456'
+    password: '$2b$10$KVSCG.JCK81fhPRPw0.KLusOLqr6DibIGaGCprV75tvt4GxzzNrOW'
   }
 ]
 
@@ -40,7 +41,7 @@ app.post('/api/posts', verifyToken, (req, res) => {
 
 app.post('/api/login', (req, res) => {
 
-  const user = users.find(user => user.username === req.body.username && user.password === req.body.password)
+  const user = users.find(user => user.username === req.body.username && compare(req.body.password, user.password))
 
   if (user) {
     jwt.sign({ user }, 'secretkey', { expiresIn: '30s' }, (error, token) => {
