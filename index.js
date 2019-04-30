@@ -18,6 +18,10 @@ const users = [
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.get('/', (req, res) => {
+  res.send('Welcome!');
+});
+
 app.get('/api', (req, res) => {
   res.json({
     message: 'welcome to the API'
@@ -25,7 +29,6 @@ app.get('/api', (req, res) => {
 })
 
 app.post('/api/posts', verifyToken, (req, res) => {
-
   jwt.verify(req.token, 'secretkey', (error, authdata) => {
     if (error) {
       res.sendStatus(403)
