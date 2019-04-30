@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*.js",
+      "src": "routes/**/*.js",
       "use": "@now/node"
     }
   ],
@@ -17,7 +17,7 @@
     },
     {
       "src": "/api/login",
-      "dest": "/routes/api/login"
+      "dest": "/routes/api/login/index.js"
     }
   ]
 }
