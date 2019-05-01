@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js now-we-test serve routes/api
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\dotnet\;C:\Users\me\AppData\Local\Microsoft\WindowsApps;C:\Users\me\AppData\Local\GitHubDesktop\bin;C:\Users\me\AppData\Local\Yarn\bin;C:\Users\me\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Users\me\AppData\Local\now-cli;C:\Users\me\.dotnet\tools;C:\Users\me\AppData\Local\hyper\app-2.1.2\resources\bin
@@ -2524,8 +2524,8 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: C:\WINDOWS\system32\cmd.exe
-  Arguments: /d /s /c C:\w-projects\test-api\node_modules\.bin\now-we-test serve routes/api
-  Directory: C:\w-projects\test-api
+  Arguments: /d /s /c nodemon index.js
+  Directory: C:\w-projects\node.js-login-test
   Output:
   
       at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
