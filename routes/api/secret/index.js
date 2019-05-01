@@ -15,10 +15,10 @@ app.post('/api/secret', verifyToken, (req, res) => {
     if (error) {
       res.sendStatus(403)
     } else {
-      let { password, dataWithoutPass } = authdata
+      let { password, ...dataWithoutPass } = authdata.user
       res.json({
         message: 'Reached secret directory! 🍕',
-        dataWithoutPass
+        user: dataWithoutPass,
       })
     }
   })

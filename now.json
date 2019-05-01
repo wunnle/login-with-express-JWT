@@ -13,15 +13,15 @@
     },
     {
       "src": "/",
-      "dest": "/routes/index.js"
+      "dest": "/routes/"
     },
     {
       "src": "/api/login",
-      "dest": "/routes/api/login/index.js"
+      "dest": "/routes/api/login/"
     },
     {
       "src": "/api/secret",
-      "dest": "/routes/api/secret/index.js"
+      "dest": "/routes/api/secret/"
     }
   ]
 }
