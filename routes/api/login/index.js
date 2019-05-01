@@ -21,7 +21,7 @@ app.post('/api/login', (req, res) => {
   const user = users.find(user => user.username === req.body.username && compare(req.body.password, user.password))
 
   if (user) {
-    jwt.sign({ user }, 'secretkey', { expiresIn: '30s' }, (error, token) => {
+    jwt.sign({ user }, 'secretkey', { expiresIn: '2 days' }, (error, token) => {
       res.json({ token })
     })
   } else {
