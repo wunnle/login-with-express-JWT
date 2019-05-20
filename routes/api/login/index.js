@@ -14,6 +14,12 @@ const users = [
     username: 'wunnle',
     email: 'sinanaksay@gmail.com',
     password: '$2b$10$KVSCG.JCK81fhPRPw0.KLusOLqr6DibIGaGCprV75tvt4GxzzNrOW'
+  },
+  {
+    id: 2,
+    username: 'leyda',
+    email: 'leydaaltun@gmail.com',
+    password: '$2b$10$yvvXErblvEj6TyqnesxlGOvRQgrBBO9rB44b7wiQQukIIANbtJ3ha'
   }
 ]
 
