@@ -1,7 +1,11 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
+app.options('*', cors());
 
 app.get('/api/secret', (req, res) => {
   res.json({
